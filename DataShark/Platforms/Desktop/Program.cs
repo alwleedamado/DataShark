@@ -1,6 +1,6 @@
 using Uno.UI.Hosting;
 
-namespace DataShark;
+namespace DataShark.Platforms.Desktop;
 
 internal class Program
 {
