@@ -3,13 +3,13 @@ using DataShark.DataGen.Models;
 
 namespace DataShark.DataGen.Generators.Company;
 
-public class CompanyGenerator(GeneratorDescriptor descriptor) : Generator(descriptor)
+public class CompanyGenerator(CompanyOptions options) : Generator
 {
+    public CompanyOptions CompanyOptions { get; } = options;
     public override Func<Faker, T, TPropTyype> Generate<T, TPropTyype>()
     {
-        var descriptor = (CompanyDescriptor)base.Descriptor;
 
-        return descriptor.CompanyOptions switch
+        return CompanyOptions switch
         {
             CompanyOptions.CompanyName => (f, _) => Convert<TPropTyype>(f.Company.CompanyName()),
             CompanyOptions.CompanySuffix => (f, _) => Convert<TPropTyype>(f.Company.CompanySuffix()),

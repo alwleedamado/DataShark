@@ -5,5 +5,5 @@ public class Column
 {
     public required string Name { get; set; }
     public required ClrType ClrType { get; set; }
-    public required GeneratorDescriptor GeneratorDescriptor { get; set; }
+    public required Generator Generator { get; set; }
 }

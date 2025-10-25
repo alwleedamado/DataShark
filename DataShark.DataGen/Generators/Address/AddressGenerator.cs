@@ -3,13 +3,13 @@ using DataShark.DataGen.Models;
 
 namespace DataShark.DataGen.Generators.Address;
 
-public class AddressGenerator(GeneratorDescriptor descriptor) : Generator(descriptor)
+public class AddressGenerator(AddressType type) : Generator
 {
+    public AddressType AddressType { get; } = type;
+    
     public override Func<Faker, T, TPropType> Generate<T, TPropType>()
     {
-        var descriptor = (AddressGeneratorDescriptor)base.Descriptor;
-
-        return descriptor.AddressType switch
+        return AddressType switch
         {
             AddressType.Country => (f, _) => Convert<TPropType>(f.Address.Country()),
             AddressType.State => (f, _) => Convert<TPropType>(f.Address.State()),

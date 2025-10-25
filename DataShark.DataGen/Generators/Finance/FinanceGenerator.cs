@@ -4,13 +4,12 @@ using DataShark.DataGen.Models;
 
 namespace DataShark.DataGen.Generators.Finance;
 
-public class FinanceGenerator(GeneratorDescriptor descriptor) : Generator(descriptor)
+public class FinanceGenerator(FinanceType financeType) : Generator
 {
+    public FinanceType FinanceType { get; set; } = financeType;
     public override Func<Faker, T, TPropType> Generate<T, TPropType>()
     {
-        var descriptor = (FinanceGeneratorDescriptor)base.Descriptor;
-
-        return descriptor.FinanceType switch
+        return FinanceType switch
         {
             FinanceType.Account => (f, _) => Convert<TPropType>(f.Finance.Account()),
             FinanceType.AccountName => (f, _) => Convert<TPropType>(f.Finance.AccountName()),
