@@ -1,20 +1,35 @@
-﻿namespace DataShark.DataGen.Models;
+﻿using System.Reflection;
+
+namespace DataShark.DataGen.Models;
 
 public class ObjectProxy(object obj)
 {
-    public object ContainedObject { get; } = obj;
+    private object ContainedObject { get; } = obj;
 
-    public object? GetPropertyValue(string propertyName)
+    public object? GetValue(string propertyName)
     {
         if(string.IsNullOrEmpty(propertyName))
             throw new ArgumentNullException(nameof(propertyName));
-        return ContainedObject?.GetType().GetProperty(propertyName)?.GetValue(ContainedObject);
+        return ContainedObject.GetType().GetProperty(propertyName)?.GetValue(ContainedObject);
     }
 
-    public void SetPropertyValue(string propertyName, object? value)
+    public void SetValue(string propertyName, object? value)
     {
         if(string.IsNullOrEmpty(propertyName))
             throw new ArgumentNullException(nameof(propertyName));
-        ContainedObject?.GetType().GetProperty(propertyName)?.SetValue(ContainedObject, value);
+        ContainedObject.GetType().GetProperty(propertyName)?.SetValue(ContainedObject, value);
+    }
+
+    public IEnumerable<object?> GetValues()
+    {
+        if (ContainedObject == null) throw new NullReferenceException("Trying to access null contained object");
+        
+        var props = ContainedObject
+            .GetType()
+            .GetProperties(BindingFlags.Instance | BindingFlags.Public);
+        foreach (var propertyInfo in props)
+        {
+            yield return propertyInfo.GetValue(ContainedObject);
+        }
     }
 }
