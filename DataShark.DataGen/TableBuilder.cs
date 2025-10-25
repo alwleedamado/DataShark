@@ -1,25 +1,18 @@
 ﻿using System.Reflection;
-using System.Reflection.Emit;
 using DataShark.DataGen.Models;
 
 namespace DataShark.DataGen;
 
-internal class TableBuilder(string typeName)
+internal static class TableBuilder
 {
-    public string TypeName { get; } = typeName;
-
-    public TypeBuilder Create(Table table)
+    public static TypeProxy Build(Table table)
     {
-        return CreateColumns(table);
-    }
-
-    private TypeBuilder CreateColumns(Table table)
-    {
-        var type = CustomAssembly.Instance.DefineType(TypeName, TypeAttributes.Public);
+        var type = CustomAssembly.Instance.DefineType(table.Name, TypeAttributes.Public);
         foreach (var column in table.Columns)
         {
             PocoBuilder.DefineProperty(type, column.Name, column.ClrType);
         }
-        return type;
+
+        return new TypeProxy(table.Name, type.CreateType());
     }
 }

@@ -2,22 +2,22 @@
 
 namespace DataShark.DataGen.Models;
 
-public class ObjectProxy(object obj)
+public class ObjectProxy(object? obj)
 {
-    private object ContainedObject { get; } = obj;
+    private object? ContainedObject { get; } = obj;
 
     public object? GetValue(string propertyName)
     {
         if(string.IsNullOrEmpty(propertyName))
             throw new ArgumentNullException(nameof(propertyName));
-        return ContainedObject.GetType().GetProperty(propertyName)?.GetValue(ContainedObject);
+        return ContainedObject?.GetType().GetProperty(propertyName)?.GetValue(ContainedObject);
     }
 
     public void SetValue(string propertyName, object? value)
     {
         if(string.IsNullOrEmpty(propertyName))
             throw new ArgumentNullException(nameof(propertyName));
-        ContainedObject.GetType().GetProperty(propertyName)?.SetValue(ContainedObject, value);
+        ContainedObject?.GetType().GetProperty(propertyName)?.SetValue(ContainedObject, value);
     }
 
     public IEnumerable<object?> GetValues()
