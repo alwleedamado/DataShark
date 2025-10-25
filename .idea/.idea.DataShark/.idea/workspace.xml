@@ -10,17 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fdb210e-6cbb-4641-9bc5-3f360cac8093" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DataShark.DataGen/Writers/JsonOutputWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataShark.DataGet.UnitTests/AddressTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DataShark/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataShark/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/DatasetBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataShark.DataGen/DatasetBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/DatasetGeneratorFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/GenerationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataShark.DataGen/GenerationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/Models/DatasetGenerationResult.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/Models/DatasetGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/DataShark.DataGen.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataShark.DataGen/DataShark.DataGen.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataShark.DataGen/Models/ObjectProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataShark.DataGen/Models/ObjectProxy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/Models/Project.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DataShark.DataGen/Models/TableGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataShark.DataGen/Models/TableGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/TableBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataShark.DataGen/TableBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataShark.DataGen/TableGeneratorFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataShark.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DataShark.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataShark.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DataShark.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Directory.Packages.props" beforeDir="false" afterPath="$PROJECT_DIR$/Directory.Packages.props" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +48,11 @@
     &quot;accountId&quot;: &quot;cf0ba2e4-f843-45e4-b279-c027a941578e&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/53539022a55f40bd95b3200c33b231c074e00/3a/5e90733d/Assert.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b9c62e8e682440cd84e6081f7672fcd3d1a000/1c/803d8b37/RuntimeType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b9c62e8e682440cd84e6081f7672fcd3d1a000/8b/5e9acdd2/MethodBaseInvoker.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="SWEA" />
@@ -59,27 +62,34 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="34IhssFZ5DrenCiIRayJJYKWyQD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.DataShark (Desktop).executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.DataShark (Desktop).executor": "Run",
+    "592799f1-f00f-4973-ab07-5a0c8579ce46.executor": "Run",
+    "614ec850-0d44-4853-b46e-89494f5e26b5.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "c0a885ce-be73-43cf-ae88-723187e41b79.executor": "Debug",
+    "d0631b2e-6acd-428d-a8a2-b3996e8ae0c7.executor": "Debug",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Publish to IIS.DataShark: win-arm64">
+}]]></component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.DataShark (Desktop)">
     <configuration name="DataShark: win-arm64" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish publish_profile="win-arm64.pubxml" pubxml_path="$PROJECT_DIR$/DataShark/Properties/PublishProfiles/win-arm64.pubxml" uuid_high="1323996502077492065" uuid_low="-6395120134897842174" />
       <method v="2" />
@@ -102,7 +112,9 @@
       <updated>1760907208186</updated>
       <workItem from="1760907214069" duration="1056000" />
       <workItem from="1761370829680" duration="107000" />
-      <workItem from="1761391338638" duration="5352000" />
+      <workItem from="1761391338638" duration="9889000" />
+      <workItem from="1761406702686" duration="1422000" />
+      <workItem from="1761408188872" duration="577000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <option name="closed" value="true" />
@@ -112,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760907551639</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor: tidy up and clean up">
+      <option name="closed" value="true" />
+      <created>1761396883153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761396883153</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +157,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+    <MESSAGE value="refactor: tidy up and clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: tidy up and clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -154,6 +175,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataShark.DataGet.UnitTests/NameGeneratorTests.cs</url>
+          <line>59</line>
+          <properties documentPath="$PROJECT_DIR$/DataShark.DataGet.UnitTests/UnitTest1.cs" containingFunctionPresentation="Method 'ShouldGenerateMany'">
+            <startOffsets>
+              <option value="1756" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1804" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

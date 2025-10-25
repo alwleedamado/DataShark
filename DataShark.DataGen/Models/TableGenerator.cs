@@ -37,7 +37,7 @@ internal class TableGenerator
             _faker = genericFn.Invoke(this,[_faker, column.Name, ColumnGenerators[column.Name]]);
         }
 
-        _fakerGenerateFn = typeof(Faker<>).GetMethod("Generate", BindingFlags.Instance | BindingFlags.Public);
+        _fakerGenerateFn = _faker?.GetType().GetMethod("Generate", [typeof(string)]);
     }
 
     private Faker<T> RuleFor<T, TPropertyType>(Faker<T> faker, string propName, Generator generator) where T : class where TPropertyType : class
@@ -48,7 +48,7 @@ internal class TableGenerator
     {
         for (var i = 0; i < sampleCount; i++)
         {
-            var result = _fakerGenerateFn?.Invoke(_faker, null);
+            var result = _fakerGenerateFn?.Invoke(_faker, [null]);
             yield return new TableGenerationResult(Name, new ObjectProxy(result));
         }
     }

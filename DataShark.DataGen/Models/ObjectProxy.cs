@@ -4,7 +4,7 @@ namespace DataShark.DataGen.Models;
 
 public class ObjectProxy(object? obj)
 {
-    private object? ContainedObject { get; } = obj;
+    public object? ContainedObject { get; } = obj;
 
     public object? GetValue(string propertyName)
     {

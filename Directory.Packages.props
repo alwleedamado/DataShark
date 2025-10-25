@@ -7,5 +7,6 @@
   -->
   <ItemGroup>
     <PackageVersion Include="Bogus" Version="35.6.4" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
   </ItemGroup>
 </Project>
